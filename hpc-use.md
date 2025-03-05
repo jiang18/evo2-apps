@@ -6,4 +6,6 @@ export HF_HOME=/usr/local/usrapps/statgen/jjiang26/.cache/huggingface
 
 cd /share/statgen/jjiang26/  
 
+bsub -Is -n 4 -q gpu -R "select[h100 || l40 || l40s]" -gpu "num=1:mode=shared:mps=no" -W 30  bash
+
 
