@@ -43,7 +43,7 @@ input_ids = torch.tensor(
     dtype=torch.int,
 ).unsqueeze(0).to('cuda:0')
 
-layer_name = 'blocks.28.mlp.l3'
+layer_name = 'blocks.20.mlp.l3'
 
 outputs, embeddings = evo2_model(input_ids, return_embeddings=True, layer_names=[layer_name])
 
